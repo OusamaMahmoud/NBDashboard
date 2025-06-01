@@ -1,30 +1,23 @@
 import ImageInputWithHook from "../shared/ImageInputWithHook";
 import TextInputWithHook from "../shared/TextInputWithHook";
-
+const inputData = [
+  { name: "name", placeholder: "Enter your name..." },
+  { name: "email", placeholder: "Enter your email address..." },
+  { name: "password", placeholder: "Enter your password..." },
+  { name: "phone", placeholder: "Enter your phone number..." },
+];
 const AddingServiceFormUi = () => {
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2">
-      <TextInputWithHook
-        label={"Service Title"}
-        name="titleEn"
-        placeholder={"Write Your Service Title [EN]..."}
-      />
-      <TextInputWithHook
-        label={"Service Title"}
-        name="titleAr"
-        placeholder={"Write Your Service Title [AR]..."}
-      />
-      {/* <TextAreaWithHook
-        label={"Service Description"}
-        name="textEn"
-        placeholder={"Write Your Service Description [EN]..."}
-      />
-      <TextAreaWithHook
-        label={"Service Description"}
-        name="textAr"
-        placeholder={"Write Your Service Description [AR]..."}
-      /> */}
-      <ImageInputWithHook label={"Service Images"} />
+      {inputData.map((input) => (
+        <TextInputWithHook
+          key={input.name}
+          label={input.name.charAt(0).toUpperCase() + input.name.slice(1)}
+          name={input.name}
+          placeholder={input.placeholder}
+        />
+      ))}
+      <ImageInputWithHook label={"Images"} />
     </section>
   );
 };

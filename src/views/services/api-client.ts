@@ -1,7 +1,7 @@
 import axios, { CanceledError } from "axios";
 
 const apiClient = axios.create({
-  baseURL: "https://dog.backend.tanfeethi.tanfeethi.com.sa",
+  baseURL: "https://truebalance.backend.tanfeethi.com.sa",
 });
 
 export { CanceledError };

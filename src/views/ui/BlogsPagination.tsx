@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import CustomPagination from "./Pagination";
 
 const BlogsPagination = ({
@@ -11,8 +12,13 @@ const BlogsPagination = ({
     const urlObj = new URL(url); // Parse the URL
     return urlObj.searchParams.get("page"); // Get the val ue of the 'page' query parameter
   }
+
+  useEffect(() => {
+    console.log(blogs);
+    console.log(blogs.meta);
+  }, [blogs]);
   return (
-    <div className="mt-8 text-white">
+    <div className="mt-8">
       {blogs?.meta && (
         <CustomPagination
           links={blogs?.links}

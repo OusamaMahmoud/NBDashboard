@@ -84,8 +84,23 @@ const Sidebar = ({ isOpen }: { isOpen: (bool: boolean) => void }) => {
             to={`/projects`}
             className={({ isActive }) => (isActive ? activeLink : normalLink)}
           >
-            <RiPagesLine />
+            <PiMicrosoftTeamsLogoFill />
             <span className="capitalize ">OverView</span>
+          </NavLink>
+          <NavLink
+            to={`/doctors`}
+            className={({ isActive }) => (isActive ? activeLink : normalLink)}
+          >
+            <PiMicrosoftTeamsLogoFill />
+
+            <span className="capitalize ">Doctors</span>
+          </NavLink>
+          <NavLink
+            to={`/specilizations`}
+            className={({ isActive }) => (isActive ? activeLink : normalLink)}
+          >
+            <RiPagesLine />
+            <span className="capitalize ">Specilizations</span>
           </NavLink>
           <NavLink
             to={`/booking`}

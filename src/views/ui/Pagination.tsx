@@ -35,19 +35,19 @@ const CustomPagination = ({
   handleGetLastPage: () => void;
 }) => {
   return (
-    <div className="mt-4 flex items-center justify-between p-5">
+    <div className="mt-4 text-black flex items-center justify-between p-5">
       <div>
         <span>{meta.per_page}</span> of {meta.total} items
       </div>
       <div className="flex items-center gap-8">
         <MdKeyboardDoubleArrowLeft
-          className="cursor-pointer text-3xl"
+          className="cursor-pointer text-3xl text-black"
           onClick={handleGetFirstPage}
         />
         <IoIosArrowBack
           className={`${
             links.prev === null ? "cursor-not-allowed" : "cursor-pointer"
-          } text-3xl`}
+          } text-3xl text-black`}
           onClick={handleGetPrevPage}
         />
 
@@ -59,18 +59,20 @@ const CustomPagination = ({
           max={meta.last_page}
           onChange={handleChange}
         /> */}
-        <p className="rounded border px-2 py-1">{meta.current_page}</p>
+        <p className="rounded border px-2 py-1 text-black">
+          {meta.current_page}
+        </p>
         <IoIosArrowForward
           className={`${
             links.next === null ? "cursor-not-allowed" : "cursor-pointer"
-          } text-3xl`}
+          } text-3xl text-black`}
           onClick={handleGetNextPage}
         />
         <MdKeyboardDoubleArrowRight
-          className="cursor-pointer text-3xl"
+          className="cursor-pointer text-3xl text-black"
           onClick={handleGetLastPage}
         />
-        <p className="badge ml-2 p-4">{meta.last_page} Pages</p>
+        <p className="badge ml-2 p-4 text-black">{meta.last_page} Pages</p>
       </div>
     </div>
   );

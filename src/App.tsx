@@ -32,6 +32,9 @@ import Blogs from "./views/menu/booking/Booking";
 import AddBlogsForm from "./views/menu/booking/AddBlogsForm";
 import BlockDates from "./views/menu/block/BlockDatesLIst";
 import AddBlockedForm from "./views/menu/block/AddBlockDatesForm";
+import Doctors from "./views/menu/doctors/Doctors";
+import AddDoctorForm from "./views/menu/doctors/AddDoctorForm";
+import Specilizations from "./views/menu/specilization/Specilizations";
 
 function App() {
   useEffect(() => {
@@ -147,6 +150,14 @@ function App() {
           <Route path="/blocks-dates" element={<BlockDates />} />
           <Route path="/blocks-dates/add" element={<AddBlockedForm />} />
           {/* blocks */}
+          {/* Doctors*/}
+          <Route path="/doctors" element={<Doctors />} />
+          <Route path="/doctors/add" element={<AddDoctorForm />} />
+          <Route path="/doctors/add/:id" element={<AddDoctorForm />} />
+          {/* Doctors */}
+          {/* Specilizations*/}
+          <Route path="/specilizations" element={<Specilizations />} />
+          {/* Specilizations */}
 
           <Route path="unauthorized" element={<UnauthorizedPage />} />
 
