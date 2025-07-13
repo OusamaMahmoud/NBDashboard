@@ -4,12 +4,11 @@ import { MdMenu } from "react-icons/md";
 import logo from "/assets/logo.png";
 import { useTranslation } from "react-i18next";
 import { PiMicrosoftTeamsLogoFill } from "react-icons/pi";
-import { RiPagesLine, RiUserSearchFill } from "react-icons/ri";
+import { RiPagesLine } from "react-icons/ri";
 import { useAuth } from "../../../contexts/AuthProvider";
 import apiClient from "../../services/api-client";
 import logout from "/assets/sidebar/logout.svg";
-import { FaServicestack, FaSlideshare } from "react-icons/fa";
-import { IoSettings } from "react-icons/io5";
+
 const Sidebar = ({ isOpen }: { isOpen: (bool: boolean) => void }) => {
   const { setAuth } = useAuth();
   const [error, setError] = useState("");
@@ -102,7 +101,7 @@ const Sidebar = ({ isOpen }: { isOpen: (bool: boolean) => void }) => {
             <RiPagesLine />
             <span className="capitalize ">Specilizations</span>
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to={`/booking`}
             className={({ isActive }) => (isActive ? activeLink : normalLink)}
           >
@@ -164,7 +163,7 @@ const Sidebar = ({ isOpen }: { isOpen: (bool: boolean) => void }) => {
           >
             <IoSettings />
             <span className="capitalize ">Settings</span>
-          </NavLink>
+          </NavLink> */}
           <div
             onClick={handleLogoutClick}
             className={`${normalLink} cursor-pointer`}

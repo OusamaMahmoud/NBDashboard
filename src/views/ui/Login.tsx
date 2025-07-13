@@ -84,7 +84,7 @@ const Login = () => {
             <h1 className="text-[#969696] text-[45px] font-bold text-center">
               Login to{" "}
               <span className="bg-gradient-to-b from-[#452CB3] to-[#C86DD7] bg-clip-text text-transparent">
-                K9 Flow Dog Training
+                True Balance
               </span>
             </h1>
 
